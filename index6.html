@@ -1,0 +1,136 @@
+ 
+<html>
+ 
+<head>
+        <title>Our Team</title>
+         
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+		<script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+		<link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+		<link rel="stylesheet" href="css/style10.css">
+		 
+    </head>
+    <body>
+    <h1><br><br>Our Team</h1>
+    <div class="first">
+     <a href="index.html">HOME</a>
+    </div>
+    <br><br><br><br><br>
+		 
+		<div class="book_wrapper">
+			<a id="next_page_button"></a>
+			<a id="prev_page_button"></a>
+			 
+			<div id="mybook" style="display:none;">
+				<div class="b-load">
+					<div>
+						<img src="images/Rohit%20Saiju.PNG" alt=""/>
+						<h1>Dr. Rohit Saiju, MD</h1>
+						<p>Head Surgeon</p>
+	
+					</div>
+					<div>
+						<p><br><br><br><br>Dr. Saiju is a dedicated ophthalmic surgeon specialized in Oculoplastic surgery which deals with problems affecting the eyelids, tear ducts and eye socket. He also has special interest in cosmetic eyelid surgery, Botulinum toxin injections (BOTOX). He has a prestigious career over a decade in clinical eye and facial plastic surgery and has led these services since 2004. His credentials emphatically distinguish him in the field; he holds master degrees in ophthalmology in 2001 from Tribhuvan University Kathmandu and one year clinical fellowship from prestigious Royal Victorian Eye and Ear hospital Melbourne (2003-4). He has completed an Intensive Endoscopic Dacryocystorhinostomy course from Mettapracharak Eye Hospital Thailand in 2008.</p>
+
+					</div>
+					<div>
+						<img src="images/Purnima%20Rajkarnikar%20Sthapit.PNG" alt="" />
+						<h1>Dr Purnima Rajkarnikar Sthapit</h1>
+						<p>Ocular Oncologist</p>
+
+					</div>
+					<div>
+						<p><br><br><br>Dr Purnima was trained in Oculoplastic surgery at LMU Augenklinikum, Munich, Germany and then at Tilganga Institute of Ophthalmology. Later she did her further fellowship in ocular oncology from Will’s Eye Hospital, Philadelphia, USA and Centre for Sight, Hyderabad. She is actively involved in management of various eye cancers like Retinoblastoma, Melanoma, Ocular Surface Squamous Neoplasia to name the few. She has also been teaching and conducting oculoplastic surgeries for watery eyes, ptosis, entropion, ectropion etc. Apart from patient management, she is doing various research activities and presentation in National and International conferences too. She currently holds the position of Central Committee member of Nepal Cancer Relief Society as well.</p>
+
+					</div>
+					<div>
+						<img src="images/Sanjita%20Sharma.PNG" alt="" />
+						<h1>Dr Sanjita Sharma, MD</h1>
+						<p>Vitreo – Retina specialist</p>
+
+					</div>
+					<div>
+						<p><br><br>Dr. Sanjita Sharma is a dynamic Vitreo – Retina specialist. She has been practicing ophthalmology since 2011 and providing the vitreo retina services at Tilganga Institute of ophthalmology after an eighteen months fellowship, jointly at the Tilganga institute of ophthalmology and at John A. Moran centre, Utah, U.S.A. She has also received the training for the retina surgeries at Sushrut Eye Hospital, Kolkata, India. Apart from the retina services she is a well trained SICS and Phaco surgeon for cataract management. She has served as the hospital chief, at the Hetauda community eye hospital, Hetauda for a period of one and a half year, during which period she had been looking after the hospital administration and the clinical services simultaneously. Dr. Sharma has attended many National and International conferences with the gain in knowledge and its implementation while treating the patients.</p>
+			
+					</div>
+					<div>
+						<img src="images/Shyam%20Vyas.PNG" alt="" />
+						<h1>Dr Shyam Vyas, MD</h1>
+						<p>Surgeon</p>
+
+					</div>
+					<div>
+						<p><br><br><br><br><br><br>Dr Shyam a young and dynamic eye surgeon, completed his MBBS from college of medical science Bharatpur.After completing his MD Ophthalmology from NAMS Kathmandu he had been working as Ophthalmologist in Hetauda community eye hospital and Tilganga Institute of ophthalmology for 3 years . Cataract and community ophthalmology is his prefer in the field.</p>
+
+					</div>
+					<div>
+						<img src="images/Simran%20Dhakal.jpg" alt="" />
+						<h1>Simran Dhakal</h1>
+						<p></p>
+
+					</div>
+					<div>
+
+						<p>Information Unknown, Sorry.</p>
+	
+					</div>
+						<div>
+						<img src="images/shovadi.jpg" alt="" />
+						<h1>Shova Joshi</h1>
+						<p>Administrator</p>
+
+					</div>
+					<div>
+
+						<p><br><br><br><br>Shova Joshi, an energetic lady from Kathmandu has been actively working in Dristi Eye Clinic, Kantipath for the last 6 years as a front desk coordinator. She is active in her professional work , hard working and a devoted staff and well motivated in her responsibilities. Today she leads the practice with her administrative skills and knowledge as being primarily responsiblefor schedule meetings and appointments, cordinating office activities and managerial woks of the clinic. She has received her Bachelor Degree in business study from CIT College TU, Kathmandu and is currently pursuing her Masters degrees</p>
+	
+					</div>
+					
+				</div>
+			</div>
+		</div>
+        
+        <script type="text/javascript">
+			$(function() {
+				var $mybook 		= $('#mybook');
+				var $bttn_next		= $('#next_page_button');
+				var $bttn_prev		= $('#prev_page_button');
+				var $loading		= $('#loading');
+				var $mybook_images	= $mybook.find('img');
+				var cnt_images		= $mybook_images.length;
+				var loaded			= 0;
+				 
+				$mybook_images.each(function(){
+					var $img 	= $(this);
+					var source	= $img.attr('src');
+					$('<img/>').load(function(){
+						++loaded;
+						if(loaded == cnt_images){
+							$loading.hide();
+							$bttn_next.show();
+							$bttn_prev.show();
+							$mybook.show().booklet({
+								name:               null,                            //  
+								width:              800,                             //  
+								height:             500,                             //   
+								speed:              600,                             //  
+								direction:          'LTR',                           //  
+								                           //  
+								next:               $bttn_next,          			//  
+								prev:               $bttn_prev,          			//  
+								                       
+							});
+							Cufon.refresh();
+						}
+					}).attr('src',source);
+				});
+				
+			});
+        </script>
+ 
+    </body>
+ 
+</html>
